@@ -16,7 +16,6 @@
 		"esModuleInterop": true,
 		"experimentalDecorators": true,
 		"useDefineForClassFields": true,
-		"baseUrl": ".",
 		"skipLibCheck": true,
 		"allowSyntheticDefaultImports": true,
 		"forceConsistentCasingInFileNames": true,
@@ -25,6 +24,7 @@
 		"resolveJsonModule": true,
 		"isolatedModules": true,
 		"noEmit": true,
+		"baseUrl": ".",
 		"paths": {
 			"@models/*": [
 				"./src/core/models/*"
@@ -48,5 +48,9 @@
 	},
 	"include": [
 		"src"
+	],
+	"exclude": [
+		"node_modules",
+		"dist"
 	]
 }
