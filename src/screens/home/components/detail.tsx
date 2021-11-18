@@ -1,12 +1,12 @@
 import { Button, HStack, Stack, VStack } from '@chakra-ui/react'
-import { useObserver } from 'mobx-react-lite'
+import { observer, useObserver } from 'mobx-react-lite'
 import React, { useState, useEffect } from 'react'
 import { Social } from '@models/social.model'
 import _ from 'lodash'
 import { useAppStore, useNestedStore } from '@core/stores'
 import { useHistory } from 'react-router'
 
-function HomeDetail() {
+const HomeDetail = observer((props) => {
 	const store = useNestedStore(s => s.wallet)
 	const history = useHistory()
 
@@ -31,6 +31,6 @@ function HomeDetail() {
 			Create
 		</Button>
 	</VStack>
-}
+})
 
 export default HomeDetail
